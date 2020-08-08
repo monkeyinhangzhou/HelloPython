@@ -146,15 +146,24 @@ for i in x:
 #数组切片
 #创建一个新数组,包含元素为a[i],...a[j-1]
 #i默认值为0,j默认值为len(a)
-a[i:j]
+#a[i:j]
 a[:]
 #虽然简洁,但是开销很大
 y = x[:]
 
+#数组的四种基本运算:创建数组,索引访问,索引赋值,迭代遍历
+#Python的列表数据类型的运算十分不理想,所以使用扩展模块numpy处理大数组
 
-
-
-
+#扑克牌
+SUITS = ['Clubs','Diamonds','Hearts','Spades']
+RANKS = ['2','3','4','5','6','7','8','9','10','Jack','Queen','King','Ace']
+deck = []
+for rank in RANKS:
+    for suit in SUITS:
+        card = rank + ' of ' + suit
+        deck += [card]
+print(deck)#52张扑克牌
+print(len(deck))
 
 
 
